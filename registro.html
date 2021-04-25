@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/estilos.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<!-- inicio navbar -->
+<nav class="black" role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo-container" href="index.html" class="brand-logo white-text">
+            <span class="iconify iconColor" data-icon="mdi-penguin" data-inline="false"></span>
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a class="white-text" href="index.html">Principal</a></li>
+            <li><a class="white-text" href="catalogo.html">Galería</a></li>
+            <li><a class="white-text" href="quienessomos.html">Nosotros</a></li>
+        </ul>
+        <!-- navbar mobile, llama al menu de hamburgesa -->
+        <ul id="nav-mobile" class="sidenav red lighten-2">
+            <li><a class="white-text" href="index.html">Principal</a></li>
+            <li><a class="white-text" href="catalogo.html">Galería</a></li>
+            <li><a class="white-text" href="quienessomos.html">Nosotros</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons iconColor">menu</i></a>
+    </div>
+</nav>
+<!-- fin del navbar -->
+
+<!-- comienzo del contenido -->
+
+<div class="container-fluid col s12 m12 l12 xl12">
+
+    <div class="divider"></div>
+    <div class="container section">
+        <h3 class="center-align tituloParrafo">Registrate en PinWin</h3>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12 m6 l6 xl6">
+                        <i class="material-icons prefix">face</i>
+                        <input placeholder="Pedro" id="first_name" type="text" class="validate">
+                        <label for="first_name">Primer nombre</label>
+                    </div>
+                    <div class="input-field col s12 m6 l6 xl6">
+                        <i class="material-icons prefix">face</i>
+                        <input placeholder="Salas Contreras" id="last_name" type="text" class="validate">
+                        <label for="last_name">Apellidos</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">vpn_key</i>
+                        <input placeholder="Password" id="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">vpn_key</i>
+                        <input placeholder="Password" id="password2" type="password" class="validate">
+                        <label for="password">Repita el password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">email</i>
+                        <input placeholder="Email" id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">flag</i>
+                        <select>
+                            <option value="1" disabled selected>Selecciona tu país</option>
+                            <option value="2">Chile</option>
+                            <option value="3">USA</option>
+                            <option value="4">Japón</option>
+                            <option value="5">China</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <div>
+                <div class="container section">
+                    <h5 class="center-align tituloParrafo">Selecciona el nivel de tu membresía</h5>
+                    <div class="divider"></div>
+                    <div class="row" align="center">
+                        <form action="#">
+                            <p>
+                                <label>
+                                    <input class="with-gap" name="group1" type="radio" checked/>
+                                    <span>Free</span>
+                                </label>
+                                <label>
+                                    <input class="with-gap" name="group1" type="radio"/>
+                                    <span>Silver</span>
+                                </label>
+                                <label>
+                                    <input class="with-gap" name="group1" type="radio"/>
+                                    <span>Gold</span>
+                                </label>
+                            </p>
+                        </form>
+                    </div>
+                    <div>
+                        <div class="row" align="center">
+                            <button class="btn-large waves-effect waves-light red lighten-2 pulse" type="submit" name="action">Registrarme
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- fin destacados -->
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<footer class="page-footer red lighten-2">
+    <div class="container">
+        <div class="row">
+            <div class="col l12 s12">
+                <h5 class="white-text">Redes sociales</h5>
+                <div class="row">
+                    <p>Siguenos en nuestras redes sociales para mas informacion</p>
+
+                    <a href="https://www.facebook.com/" class="fa fa-facebook "></a>
+                    <a href="https://www.instagram.com/" class="fa fa-twitter  "></a>
+                    <a href="https://twitter.com/" class="fa fa-instagram  "></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            &copy; <a class="white-text text-lighten-3">Andrés Riquelme, Roberto
+            Castillo y Sebastián Sandoval.Todos los derechos reservados</a>
+        </div>
+    </div>
+</footer>
+</body>
+
+
+</html>

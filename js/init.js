@@ -4,6 +4,7 @@
     $('.carousel').carousel({dist: 0,padding: 0,fullWidth: true,indicator: false,duration: 100,});
     $('.materialboxed').materialbox();
     $('.parallax').parallax();
+    $('select').formSelect();
     autoplay();
     function autoplay() {
         $('.carousel').carousel('next');
