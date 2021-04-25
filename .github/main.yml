@@ -1,0 +1,37 @@
+name: CI
+on:
+  pull_request:
+    branches:
+      - "*"
+  push:
+    branches:
+      - main
+
+env:
+  IMAGE_NAME: pinwin/web
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: wjdp/htmltest-action@master
+        with:
+          path: .
+
+  deploy:
+    needs: [test]
+    if: ${{ github.event_name == 'push' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build image
+        run: |
+          docker pull $IMAGE_NAME
+          docker build -t $IMAGE_NAME:latest .
+      - name: Log in into Docker Hub
+        run: |
+          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+      - name: Push image to registry
+        run: |
+          docker push $IMAGE_NAME
