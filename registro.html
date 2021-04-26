@@ -43,33 +43,41 @@
                 <div class="row">
                     <div class="input-field col s12 m6 l6 xl6">
                         <i class="material-icons prefix">face</i>
-                        <input placeholder="Pedro" id="first_name" type="text" class="validate">
+                        <input placeholder="Pedro" id="first_name" type="text" class="validate" maxlength="32"
+                               pattern="[A-Za-z]{3,32}">
                         <label for="first_name">Primer nombre</label>
                     </div>
                     <div class="input-field col s12 m6 l6 xl6">
                         <i class="material-icons prefix">face</i>
-                        <input placeholder="Salas Contreras" id="last_name" type="text" class="validate">
+                        <!-- validacion para apellidos, incluye a manera opcional la posibilidad del espacio-->
+                        <input placeholder="Salas Contreras" id="last_name" type="text" class="validate" maxlength="50"
+                               pattern="[A-Za-z\s*]{1,32}">
                         <label for="last_name">Apellidos</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">vpn_key</i>
-                        <input placeholder="Password" id="password" type="password" class="validate">
-                        <label for="password">Password</label>
+                        <!-- Minimum eight characters, at least one letter and one number: -->
+                        <input placeholder="Password" id="password" type="password" class="validate" maxlength="12"
+                               pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+                        <label for="Password">Password (minimo 8 caracteres con un número a lo menos)</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">vpn_key</i>
-                        <input placeholder="Password" id="password2" type="password" class="validate">
+                        <input placeholder="Password" id="password2" type="password" class="validate" maxlength="12"
+                               pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
                         <label for="password">Repita el password</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">email</i>
-                        <input placeholder="Email" id="email" type="email" class="validate">
+                        <!-- Valido para el 99% de los emails-->
+                        <input placeholder="Email" id="email" type="email" class="validate"
+                               pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$">
                         <label for="email">Email</label>
                     </div>
                 </div>
@@ -82,6 +90,8 @@
                             <option value="3">USA</option>
                             <option value="4">Japón</option>
                             <option value="5">China</option>
+                            <option value="6">Argentina</option>
+                            <option value="7">Brasil</option>
                         </select>
                     </div>
                 </div>
@@ -110,7 +120,8 @@
                     </div>
                     <div>
                         <div class="row" align="center">
-                            <button class="btn-large waves-effect waves-light red lighten-2 pulse" type="submit" name="action">Registrarme
+                            <button class="btn-large waves-effect waves-light red lighten-2 pulse" type="submit"
+                                    name="action">Registrarme
                                 <i class="material-icons right">send</i>
                             </button>
                         </div>
