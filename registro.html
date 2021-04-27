@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="es">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -8,7 +9,7 @@
     <link href="css/estilos.css" type="text/css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
+<body>
 <!-- inicio navbar -->
 <nav class="black" role="navigation">
     <div class="nav-wrapper container">
@@ -26,7 +27,8 @@
             <li><a class="white-text" href="catalogo.html">Galería</a></li>
             <li><a class="white-text" href="quienessomos.html">Nosotros</a></li>
         </ul>
-        <a href="index.html" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons iconColor">menu</i></a>
+        <a href="index.html" data-target="nav-mobile" class="sidenav-trigger"><i
+                class="material-icons iconColor">menu</i></a>
     </div>
 </nav>
 <!-- fin del navbar -->
@@ -44,6 +46,7 @@
                     <div class="input-field col s12 m6 l6 xl6">
                         <i class="material-icons prefix">face</i>
                         <input placeholder="Pedro" id="first_name" type="text" class="validate" maxlength="32"
+                               required="" aria-required="true"
                                pattern="[A-Za-z]{3,32}">
                         <label for="first_name">Primer nombre</label>
                     </div>
@@ -51,6 +54,7 @@
                         <i class="material-icons prefix">face</i>
                         <!-- validacion para apellidos, incluye a manera opcional la posibilidad del espacio-->
                         <input placeholder="Salas Contreras" id="last_name" type="text" class="validate" maxlength="50"
+                               required="" aria-required="true"
                                pattern="[A-Za-z\s*]{1,32}">
                         <label for="last_name">Apellidos</label>
                     </div>
@@ -60,6 +64,7 @@
                         <i class="material-icons prefix">vpn_key</i>
                         <!-- Minimum eight characters, at least one letter and one number: -->
                         <input placeholder="Password" id="password" type="password" class="validate" maxlength="12"
+                               required="" aria-required="true"
                                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
                         <label for="Password">Password (minimo 8 caracteres con un número a lo menos)</label>
                     </div>
@@ -68,6 +73,7 @@
                     <div class="input-field col s12">
                         <i class="material-icons prefix">vpn_key</i>
                         <input placeholder="Password" id="password2" type="password" class="validate" maxlength="12"
+                               required="" aria-required="true"
                                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
                         <label for="password">Repita el password</label>
                     </div>
@@ -76,7 +82,8 @@
                     <div class="input-field col s12">
                         <i class="material-icons prefix">email</i>
                         <!-- Valido para el 99% de los emails-->
-                        <input placeholder="Email" id="email" type="email" class="validate"
+                        <input placeholder="Email" id="email" type="email" class="validate" required=""
+                               aria-required="true"
                                pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$">
                         <label for="email">Email</label>
                     </div>
@@ -95,43 +102,19 @@
                         </select>
                     </div>
                 </div>
-            </form>
-            <div>
-                <div class="container section">
-                    <h5 class="center-align tituloParrafo">Selecciona el nivel de tu membresía</h5>
-                    <div class="divider"></div>
+                <div>
                     <div class="row" align="center">
-                        <form action="#">
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="group1" type="radio" checked/>
-                                    <span>Free</span>
-                                </label>
-                                <label>
-                                    <input class="with-gap" name="group1" type="radio"/>
-                                    <span>Silver</span>
-                                </label>
-                                <label>
-                                    <input class="with-gap" name="group1" type="radio"/>
-                                    <span>Gold</span>
-                                </label>
-                            </p>
-                        </form>
-                    </div>
-                    <div>
-                        <div class="row" align="center">
-                            <button class="btn-large waves-effect waves-light red lighten-2 pulse" type="submit"
-                                    name="action">Registrarme
-                                <i class="material-icons right">send</i>
-                            </button>
-                        </div>
+                        <button class="btn-large waves-effect waves-light red lighten-2 pulse" type="submit"
+                                name="action">Registrarme
+                            <i class="material-icons right">send</i>
+                        </button>
                     </div>
                 </div>
-            </div>
-
+            </form>
         </div>
     </div>
 </div>
+
 
 <!-- fin destacados -->
 
@@ -165,6 +148,5 @@
     </div>
 </footer>
 </body>
-
 
 </html>
