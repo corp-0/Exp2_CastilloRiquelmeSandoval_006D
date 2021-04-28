@@ -15,7 +15,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: wjdp/htmltest-action@master
+      - name: Linter HTML y CSS
+        uses: Cyb3r-Jak3/html5validator-action@v0.5
+        with:
+          root: .
+          css: true
+      - uses: actions/upload-artifact@v2
+        with:
+          name: log
+          path: log.log
+      - name: test HTML
+        uses: wjdp/htmltest-action@master
         with:
           path: .
 
