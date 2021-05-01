@@ -10,7 +10,6 @@
     $('.materialboxed').materialbox();
     $('.parallax').parallax();
     $('select').formSelect();
-    $('select').material_select();
     // for HTML5 "required" attribute
     $("select[required]").css({
       display: "inline",
