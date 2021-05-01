@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/estilos.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <nav class="black" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="Index.html" class="brand-logo white-text">
+                <span class="iconify iconColor" data-icon="mdi-penguin" data-inline="false"></span>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a class="white-text" href="Index.html">Principal</a></li>
+                <li><a class="white-text" href="catalogo.html">Galería</a></li>
+                <li><a class="white-text" href="quienessomos.html">Nosotros</a></li>
+            </ul>
+            <!-- navbar mobile, llama al menu-->
+            <ul id="nav-mobile" class="sidenav red lighten-2">
+                <li><a class="white-text" href="Index.html">Principal</a></li>
+                <li><a class="white-text" href="catalogo.html">Galería</a></li>
+                <li><a class="white-text" href="quienessomos.html">Nosotros</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons iconColor">menu</i></a>
+        </div>
+    </nav>
+
+    <div class="container-fluid col s12 m12 l12 xl12">
+        <div class="divider"></div>
+        <div class="container section">
+            <h3 class="center-align">Contactanos !</h3>
+            <p class="flow-text center-align">
+                Por qué en PinWin sabemos que tus dudas o sugerencias son importantes Háznoslas saber
+            </p>
+            
+            <div class="container section">
+                <div class="row">
+                    <form class="col s12">
+                     <div class="row card-panel">
+                         <div class="row">
+                                <form class="col s12">
+                                  <div class="row">
+                                    
+                                    <div class="input-field col s12">
+                                      <i class="material-icons prefix">mail</i>
+                                      <input id="email" placeholder="Ingresa tu Email" type="email" class="validate" required>
+                                      <label for="email">Email</label>
+                                      <span class="helper-text" data-error="Email Inválido" data-success="Email Correcto"></span>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <i class="material-icons prefix">account_box</i>
+                                        <input placeholder="Ingrese nombre" id="first_name" type="text" class="validate" required>
+                                        <label for="first_name">Nombre</label>
+                                      </div>
+                                    <div class="input-field col s6">
+                                        <i class="material-icons prefix">account_box</i>
+                                        <input placeholder="Ingrese Apellido" id="apellido" type="text" class="validate" required>
+                                        <label for="apellido">Apellido</label>
+                                      </div>
+                                    <div class="input-field col s12">
+                                        
+                                        <select class="browser-default" class="validate" required>
+                                        <option value="" disabled selected>Elige una Categoria</option>
+                                        <option value="1">Reclamos</option>
+                                        <option value="2">Dudas</option>
+                                        <option value="3">Sugerencias</option>
+                                        </select>
+                                    </div>
+                                    
+                                        <div class="input-field col s12">
+                                        <i class="material-icons prefix">create</i>
+                                          <textarea id="textarea1" class="materialize-textarea" length="300" maxlength="300" class="validate" required></textarea>
+                                          <label for="textarea1">Textarea</label>
+                                        </div>
+                                      <br>
+                                    
+                                    
+                                    <div class="center-align">
+                                        <button class="btn" type="Submit">Enviar</button>
+                                    </div>
+
+                                  </div>
+                                  
+                                </form>
+                                
+                         </div>
+
+                   </form>
+                </div>
+            </div>
+    
+
+                    
+            
+            
+ 
+
+        </div>
+
+    </div>
+    <!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script > 
+  $('input#input_text, textarea#textarea1').characterCounter();</script>
+
+    <footer class="page-footer red lighten-2">
+        <div class="container">
+            <div class="row">
+                <div class="col l12 s12">
+                    <h5 class="white-text">Redes sociales</h5>
+                    <div class="row"  >
+                        <p>Siguenos en nuestras redes sociales para mas informacion</p>
+    
+                        <a href="https://www.facebook.com/" class="fa fa-facebook "></a>
+                        <a href="https://www.instagram.com/" class="fa fa-twitter  "></a>
+                        <a href="https://twitter.com/" class="fa fa-instagram  "></a><br><br>
+                        <a class="white-text" href="contacto.html">Contactanos</a>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                &copy; <a class="white-text text-lighten-3">Andrés Riquelme, Roberto
+                Castillo y Sebastián Sandoval.Todos los derechos reservados</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
