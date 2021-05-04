@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -106,12 +106,14 @@
                         </select>
                     </div>
                 </div>
+                <br>
                 <div>
-                    <div class="row center" onmouseover = ChangeTextButton("ButtonRegistro")>
+                    <div class="row center" >
                         <button id="ButtonRegistro" class="btn-large waves-effect waves-light red lighten-2 pulse" type="submit"
-                                name="action">
+                                name="action" onmouseover = ChangeTextButtonIn("ButtonRegistro")
+                                onmouseout = ChangeTextButtonOut("ButtonRegistro")
+                        >
                             Regístrate
-                            <i class="material-icons right">send</i>
                         </button>
                     </div>
                 </div>
@@ -130,11 +132,14 @@
 
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 <script>
-    function ChangeTextButton(button_id)  {
-        var text = document.getElementById(button_id).firstChild;
-        text.data = text.data == "Regístrate" ? "Bienvenido" : "Regístrate";
+    function ChangeTextButtonIn(button_id)  {
+        document.getElementById(button_id).innerText = 'Bienvenido';
     }
-
+</script>
+<script>
+    function ChangeTextButtonOut(button_id)  {
+        document.getElementById(button_id).innerText = 'Regístrate';
+    }
 </script>
 <footer class="page-footer red lighten-2">
     <div class="container">
