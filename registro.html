@@ -106,11 +106,11 @@
                         </select>
                     </div>
                 </div>
-                <div>
-                    <div class="row center">
-                        <button class="btn-large waves-effect waves-light red lighten-2 pulse" type="submit"
+                <div>>
+                    <div class="row center" onmouseover = ChangeTextButton("ButtonRegistro")>
+                        <button id="ButtonRegistro" class="btn-large waves-effect waves-light red lighten-2 pulse" type="submit"
                                 name="action">
-                            Registrarme
+                            Regístrate
                             <i class="material-icons right">send</i>
                         </button>
                     </div>
@@ -129,6 +129,13 @@
 <script src="js/init.js"></script>
 
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script>
+    function ChangeTextButton(button_id)  {
+        var text = document.getElementById(button_id).firstChild;
+        text.data = text.data == "Regístrate" ? "Bienvenido" : "Regístrate";
+    }
+
+</script>
 <footer class="page-footer red lighten-2">
     <div class="container">
         <div class="row">
