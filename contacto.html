@@ -51,7 +51,7 @@
     <div class="container-fluid col s12 m12 l12 xl12">
         <div class="divider"></div>
         <div class="container section">
-            <h3 class="center-align">Contactanos !</h3>
+            <h3 class="center-align">Contáctanos !</h3>
             <p class="flow-text center-align">
                 Por qué en PinWin sabemos que tus dudas o sugerencias son importantes Háznoslas saber
             </p>
@@ -67,34 +67,39 @@
                                             <input id="email" placeholder="Ingresa tu Email" type="email"
                                                 class="validate" required>
                                             <label for="email">Email</label>
-                                            <span class="helper-text" data-error="Email Inválido"
-                                                data-success="Email Correcto"></span>
+                                            <span class="helper-text" data-error="Email Inválido"></span>
                                         </div>
                                         <div class="input-field col s6">
                                             <i class="material-icons prefix">account_box</i>
-                                            <input placeholder="Ingrese nombre" id="first_name" type="text"
-                                                class="validate" required>
+                                            <input placeholder="Ingrese nombre" id="nombre" type="text"
+                                                class="validate" maxlength="32"
+                                                required="" aria-required="true"
+                                                pattern="[A-Za-z]{3,32}">
                                             <label for="first_name">Nombre</label>
+                                            <span class="helper-text" data-error="Nombre Inválido"></span>
                                         </div>
                                         <div class="input-field col s6">
                                             <i class="material-icons prefix">account_box</i>
                                             <input placeholder="Ingrese Apellido" id="apellido" type="text"
-                                                class="validate" required>
+                                                class="validate" maxlength="32"
+                                                required="" aria-required="true"
+                                                pattern="[A-Za-z]{3,32}">
                                             <label for="apellido">Apellido</label>
+                                            <span class="helper-text" data-error="Apellido Inválido"></span>
                                         </div>
                                         <div class="input-field col s12">
-                                            <select class="browser-default" class="validate" required>
-                                                <option value="" disabled selected>Elige una Categoria</option>
-                                                <option value="1">Reclamos</option>
-                                                <option value="2">Dudas</option>
-                                                <option value="3">Sugerencias</option>
+                                            <select required="" aria-required="true">
+                                              <option value="" disabled selected> Elige una Categoria</option>
+                                              <option value="1">Reclamos</option>
+                                              <option value="2">Dudas</option>
+                                              <option value="3">Sugerencias</option>
                                             </select>
-                                        </div>
+                                        </div>                              
                                         <div class="input-field col s12">
                                             <i class="material-icons prefix">create</i>
                                             <textarea id="textarea1" class="materialize-textarea" length="300"
                                                 maxlength="300" class="validate" required></textarea>
-                                            <label for="textarea1">Textarea</label>
+                                            <label for="textarea1">Ingrese la información </label>
                                         </div>
                                         <br>
                                         <div class="center-align">
