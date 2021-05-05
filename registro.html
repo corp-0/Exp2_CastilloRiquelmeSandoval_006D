@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -23,7 +23,7 @@
             <li><a class="white-text" href="quienessomos.html">Nosotros</a></li>
             <li><a class="pink-text" href="registro.html">Regístrate</a></li>
             <li>
-                <a  onclick="DualFlipClassSwitch('html', 'dark', 'snow-white', 'ColorMode');">
+                <a onclick="DualFlipClassSwitch('html', 'dark', 'snow-white', 'ColorMode');">
                     <i class="material-icons iconColor">brightness_4</i>
                 </a>
             </li>
@@ -61,6 +61,8 @@
                                required="" aria-required="true"
                                pattern="[A-Za-z]{3,32}">
                         <label for="first_name">Primer nombre</label>
+                        <span class="helper-text" data-error="Ingresé un nombre válido.">
+                              </span>
                     </div>
                     <div class="input-field col s12 m6 l6 xl6">
                         <i class="material-icons prefix">face</i>
@@ -69,25 +71,31 @@
                                required="" aria-required="true"
                                pattern="[A-Za-z\s*]{1,32}">
                         <label for="last_name">Apellidos</label>
+                        <span class="helper-text" data-error="Ingresé un apellido válido.">
+                              </span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">vpn_key</i>
                         <!-- Minimum eight characters, at least one letter and one number: -->
-                        <input placeholder="Password" id="password" type="password" class="validate" maxlength="12"
+                        <input id="password" type="password" class="validate" maxlength="12"
                                required="" aria-required="true"
                                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
-                        <label for="Password">Password (minimo 8 caracteres con un número a lo menos)</label>
+                        <label for="password">Password</label>
+                        <span class="helper-text" data-error="Use a lo menos 8 caracteres con un número incluído.">
+                              </span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">vpn_key</i>
-                        <input placeholder="Password" id="password2" type="password" class="validate" maxlength="12"
+                        <input id="passwordConfirm" type="password" maxlength="12"
                                required="" aria-required="true"
                                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
-                        <label for="password">Repita el password</label>
+                        <label id="lblPasswordConfirm" for="passwordConfirm">Password (Confirmación)</label>
+                        <span class="helper-text" data-error="Las contraseñas no coinciden.">
+                              </span>
                     </div>
                 </div>
                 <div class="row">
@@ -98,7 +106,7 @@
                                aria-required="true"
                                pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$">
                         <label for="email">Email</label>
-                        <span class="helper-text" data-error="Inválido" data-success="right">
+                        <span class="helper-text" data-error="Email inválido, ingrese uno válido." data-success="Valido">
                         </span>
                     </div>
                 </div>
@@ -118,8 +126,8 @@
                 </div>
                 <div>
                     <div class="row center">
-                        <button id="ButtonRegistro" class="btn-large red lighten-2 waves-effect" type="submit"
-                                name="action" onmouseover = "MakePulse(this);" onmouseout="RemovePulse(this);">
+                        <button id="submit" class="btn-large red lighten-2 waves-effect" type="submit"
+                                name="action" onmouseover="MakePulse(this);" onmouseout="RemovePulse(this);">
                             Regístrate
                         </button>
                     </div>
@@ -137,26 +145,16 @@
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>
 <script async type="text/javascript" src="js/darkmode.js"></script>
-
+<script src="js/passwordValidation.js"></script>;
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
 <script>
     function RemovePulse(ButtonPulse) {
         ButtonPulse.classList.remove("pulse");
     }
+
     function MakePulse(ButtonPulse) {
         ButtonPulse.classList.add("pulse");
-    }
-
-</script>
-
-<script>
-
-    function ChangeTextButtonIn(button_id)  {
-        document.getElementById(button_id).innerText = 'Bienvenido';
-    }
-
-    function ChangeTextButtonOut(button_id)  {
-        document.getElementById(button_id).innerText = 'Regístrate';
     }
 
 </script>
