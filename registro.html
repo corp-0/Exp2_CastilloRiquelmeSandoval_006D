@@ -107,11 +107,10 @@
                     </div>
                 </div>
                 <div>
-                    <div class="row center" onmouseover = ChangeTextButton("ButtonRegistro")>
-                        <button id="ButtonRegistro" class="btn-large waves-effect waves-light red lighten-2 pulse" type="submit"
-                                name="action">
+                    <div class="row center">
+                        <button id="ButtonRegistro" class="btn-large  red lighten-2" type="submit"
+                                name="action" onmouseover = MakePulse("ButtonRegistro") onmouseout=RemovePulse("ButtonRegistro")>
                             Regístrate
-                            <i class="material-icons right">send</i>
                         </button>
                     </div>
                 </div>
@@ -130,9 +129,26 @@
 
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 <script>
-    function ChangeTextButton(button_id)  {
-        var text = document.getElementById(button_id).firstChild;
-        text.data = text.data == "Regístrate" ? "Bienvenido" : "Regístrate";
+    function RemovePulse(button_id) {
+
+        var d = document.getElementById(button_id);
+        d.classList.remove("pulse");
+    }
+    function MakePulse(button_id) {
+        var d = document.getElementById(button_id);
+        d.className += " pulse";
+    }
+
+</script>
+
+<script>
+
+    function ChangeTextButtonIn(button_id)  {
+        document.getElementById(button_id).innerText = 'Bienvenido';
+    }
+
+    function ChangeTextButtonOut(button_id)  {
+        document.getElementById(button_id).innerText = 'Regístrate';
     }
 
 </script>
