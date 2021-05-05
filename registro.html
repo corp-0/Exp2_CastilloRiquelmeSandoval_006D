@@ -118,8 +118,8 @@
                 </div>
                 <div>
                     <div class="row center">
-                        <button id="ButtonRegistro" class="btn-large  red lighten-2" type="submit"
-                                name="action" onmouseover = "MakePulse('ButtonRegistro');" onmouseout="RemovePulse('ButtonRegistro');">
+                        <button id="ButtonRegistro" class="btn-large red lighten-2 waves-effect" type="submit"
+                                name="action" onmouseover = "MakePulse(this);" onmouseout="RemovePulse(this);">
                             Regístrate
                         </button>
                     </div>
@@ -140,14 +140,11 @@
 
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 <script>
-    function RemovePulse(button_id) {
-
-        var d = document.getElementById(button_id);
-        d.classList.remove("pulse");
+    function RemovePulse(ButtonPulse) {
+        ButtonPulse.classList.remove("pulse");
     }
-    function MakePulse(button_id) {
-        var d = document.getElementById(button_id);
-        d.className += " pulse";
+    function MakePulse(ButtonPulse) {
+        ButtonPulse.classList.add("pulse");
     }
 
 </script>
