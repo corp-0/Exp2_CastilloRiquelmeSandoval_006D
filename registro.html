@@ -118,7 +118,7 @@
                 </div>
                 <div>
                     <div class="row center">
-                        <button id="ButtonRegistro" class="btn-large  red lighten-2" type="submit"
+                        <button id="ButtonRegistro" class="btn-large red lighten-2 waves-effect" type="submit"
                                 name="action" onmouseover = "MakePulse('ButtonRegistro');" onmouseout="RemovePulse('ButtonRegistro');">
                             Regístrate
                         </button>
@@ -147,7 +147,7 @@
     }
     function MakePulse(button_id) {
         var d = document.getElementById(button_id);
-        d.className += " pulse";
+        d.classList.add("pulse");
     }
 
 </script>
