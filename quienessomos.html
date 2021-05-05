@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>PinWin</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -22,6 +24,11 @@
             <li><a class="white-text" href="catalogo.html">Galería</a></li>
             <li><a class="white-text" href="quienessomos.html">Nosotros</a></li>
             <li><a class="pink-text" href="registro.html">Regístrate</a></li>
+            <li>
+                <a  onclick="DualFlipClassSwitch('html', 'dark', 'snow-white', 'ColorMode');">
+                    <i class="material-icons iconColor">brightness_4</i>
+                </a>
+            </li>
         </ul>
         <!-- navbar mobile, llama al menu de hamburgesa -->
         <ul id="nav-mobile" class="sidenav red lighten-2">
@@ -29,13 +36,17 @@
             <li><a class="white-text" href="catalogo.html">Galería</a></li>
             <li><a class="white-text" href="quienessomos.html">Nosotros</a></li>
             <li><a class="white-text" href="registro.html">Regístrate</a></li>
+            <li>
+                <a class="white-text" onclick="DualFlipClassSwitch('html', 'dark', 'snow-white', 'ColorMode');">
+                    Modo Claro/Oscuro
+                </a>
+            </li>
         </ul>
         <a href="index.html" data-target="nav-mobile" class="sidenav-trigger"><i
                 class="material-icons iconColor">menu</i></a>
     </div>
 </nav>
 <!-- fin del navbar -->
-
 <!-- comienzo del contenido -->
 
 <div class="container-fluid col s12 m12 l12 xl12">
@@ -76,6 +87,7 @@
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script async type="text/javascript" src="js/darkmode.js"></script>
 
 <footer class="page-footer red lighten-2">
     <div class="container">
