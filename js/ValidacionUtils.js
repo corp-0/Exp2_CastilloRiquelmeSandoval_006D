@@ -3,7 +3,6 @@
     var passwordConfirm = $("#passwordConfirm");
 
     password.on("input", function () {
-        console.log(password.val())
         if (password.val() !== passwordConfirm.val()) {
             passwordConfirm.removeClass("valid").addClass("invalid");
         } else {
@@ -12,7 +11,6 @@
     });
 
     passwordConfirm.on("input", function () {
-        console.log(passwordConfirm.val())
         if (passwordConfirm.val() !== password.val()) {
             $(this).removeClass("valid").addClass("invalid");
         } else {
@@ -23,7 +21,6 @@
 
 function ComprobarFormularioValido() {
     const validables = document.getElementsByClassName("validate");
-    console.log(validables)
 
     for (var i = 0; i < validables.length; i++) {
         if (validables[i].classList.contains("invalid")) {
