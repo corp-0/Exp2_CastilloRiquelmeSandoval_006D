@@ -51,9 +51,9 @@
     <div class="container-fluid col s12 m12 l12 xl12">
         <div class="divider"></div>
         <div class="container section">
-            <h3 class="center-align">Contáctanos !</h3>
+            <h3 class="center-align">Contáctanos</h3>
             <p class="flow-text center-align">
-                Por qué en PinWin sabemos que tus dudas o sugerencias son importantes Háznoslas saber
+                Porque en PinWin sabemos que tus dudas o sugerencias son importantes, comunícate con nosotros
             </p>
             <div class="container section">
                 <div class="row">
@@ -75,7 +75,7 @@
                                                 class="validate" maxlength="32"
                                                 required="" aria-required="true"
                                                 pattern="[A-Za-z]{3,32}">
-                                            <label for="first_name">Nombre</label>
+                                            <label for="nombre">Nombre</label>
                                             <span class="helper-text" data-error="Nombre Inválido"></span>
                                         </div>
                                         <div class="input-field col s6">
@@ -88,22 +88,22 @@
                                             <span class="helper-text" data-error="Apellido Inválido"></span>
                                         </div>
                                         <div class="input-field col s12">
-                                            <select required="" aria-required="true">
-                                              <option value="" disabled selected> Elige una Categoria</option>
+                                            <select id="categoria" required="" aria-required="true">
                                               <option value="1">Reclamos</option>
                                               <option value="2">Dudas</option>
                                               <option value="3">Sugerencias</option>
                                             </select>
+                                            <label for="categoria">Categoría</label>
                                         </div>                              
                                         <div class="input-field col s12">
                                             <i class="material-icons prefix">create</i>
                                             <textarea id="textarea1" class="materialize-textarea" length="300"
                                                 maxlength="300" class="validate" required></textarea>
-                                            <label for="textarea1">Ingrese la información </label>
+                                            <label for="textarea1">Ingrese su mensaje </label>
                                         </div>
                                         <br>
                                         <div class="center-align">
-                                            <button class="btn red lighten-2" type="Submit">Enviar</button>
+                                            <button class="btn red lighten-2" type="Submit" id="submit">Enviar</button>
                                         </div>
                                     </div>
                                 </form>
@@ -119,32 +119,37 @@
     <script src="js/init.js"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script async type="text/javascript" src="js/darkmode.js"></script>
+    <script src="js/ValidacionUtils.js"></script>
+    <script>DesactivarSiFormularioInvalido("submit")</script>
     <script>
             $('input#input_text, textarea#textarea1').characterCounter();
     </script>
 
-    <footer class="page-footer red lighten-2">
-        <div class="container">
-            <div class="row">
-                <div class="col l12 s12">
-                    <h5 class="white-text">Redes sociales</h5>
-                    <div class="row">
-                        <p>Siguenos en nuestras redes sociales para mas informacion</p>
+<footer class="page-footer red lighten-2">
+    <div class="container">
+        <div class="row">
+            <div class="col l12 s12">
+                <h5 class="white-text">Redes sociales</h5>
+                <div class="row">
+                    <p>Síguenos en nuestras redes sociales para más información</p>
 
-                        <a href="https://www.facebook.com/" class="fa fa-facebook "></a>
-                        <a href="https://www.instagram.com/" class="fa fa-twitter  "></a>
-                        <a href="https://twitter.com/" class="fa fa-instagram  "></a><br><br>
-                        <a class="white-text" href="contacto.html">Contactanos</a>
-                    </div>
+                    <a href="https://www.facebook.com/" class="fa fa-facebook "></a>
+                    <a href="https://www.instagram.com/" class="fa fa-twitter  "></a>
+                    <a href="https://twitter.com/" class="fa fa-instagram  "></a>
                 </div>
+                <div class="row">
+                    <a class="white-text" href="contacto.html">Contáctanos</a>
+                </div>
+
             </div>
         </div>
-        <div class="footer-copyright">
-            <div class="container">
-                &copy; <a class="white-text text-lighten-3">Andrés Riquelme, Roberto
-                    Castillo y Sebastián Sandoval.Todos los derechos reservados</a>
-            </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            &copy; <a class="white-text text-lighten-3">Andrés Riquelme, Roberto
+            Castillo y Sebastián Sandoval.Todos los derechos reservados</a>
         </div>
-    </footer>
+    </div>
+</footer>
 </body>
 </html>
