@@ -113,15 +113,15 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">flag</i>
-                        <select>
-                            <option value="1" disabled selected>Selecciona tu país</option>
-                            <option value="2">Chile</option>
-                            <option value="3">USA</option>
-                            <option value="4">Japón</option>
-                            <option value="5">China</option>
-                            <option value="6">Argentina</option>
-                            <option value="7">Brasil</option>
+                        <select id="pais">
+                            <option value="1">Chile</option>
+                            <option value="2">USA</option>
+                            <option value="3">Japón</option>
+                            <option value="4">China</option>
+                            <option value="5">Argentina</option>
+                            <option value="6">Brasil</option>
                         </select>
+                        <label for="pais">País:</label>
                     </div>
                 </div>
                 <div>
@@ -145,7 +145,8 @@
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>
 <script async type="text/javascript" src="js/darkmode.js"></script>
-<script src="js/passwordValidation.js"></script>;
+<script src="js/ValidacionUtils.js"></script>;
+<script>DesactivarSiFormularioInvalido("submit")</script>
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 
 <script>
@@ -156,8 +157,8 @@
     function MakePulse(ButtonPulse) {
         ButtonPulse.classList.add("pulse");
     }
-
 </script>
+
 <footer class="page-footer red lighten-2">
     <div class="container">
         <div class="row">
