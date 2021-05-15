@@ -124,6 +124,42 @@
                         <label for="pais">País:</label>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">flag</i>
+                        <script src="js/valores.js"></script>
+                        <select id="suscripcion" onchange="dropdownc(this)">
+                            <option value="free">Free</option>
+                            <option value="silver">Silver</option>
+                            <option value="gold">Gold</option>                           
+                        </select>
+                        <label for="suscripcion">Suscripción</label>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="card horizontal">
+                      <div class="card-stacked">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s6">
+                                    <p>Valor:</p>
+                                </div>
+                                <div class="col s6">
+                                    <p id="valordolar">0 USD</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <p>Valor moneda local:</p>
+                                </div>
+                                <div class="col s6">
+                                    <p id="valorclp">0 CLP</p>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 <div>
                     <div class="row center">
                         <button id="submit" class="btn-large red lighten-2 waves-effect" type="submit"
@@ -149,6 +185,7 @@
 <script>DesactivarSiFormularioInvalido("submit")</script>
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 
+
 <script>
     function RemovePulse(ButtonPulse) {
         ButtonPulse.classList.remove("pulse");
@@ -170,6 +207,8 @@
                     <a href="https://www.facebook.com/" class="fa fa-facebook "></a>
                     <a href="https://www.instagram.com/" class="fa fa-twitter  "></a>
                     <a href="https://twitter.com/" class="fa fa-instagram  "></a>
+                </div>
+                <div class="row">
                     <a class="white-text" href="contacto.html">Contactanos</a>
                 </div>
 
