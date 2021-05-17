@@ -7,18 +7,18 @@ var dict ={
     "silver": silver,
     "gold": gold
 }
-function dropdownc(dropdownd){
+function DropdownCambio(dropdown){
     
    var dolar=document.getElementById("valordolar");
-   dolar.innerHTML=dict[dropdownd.value]+" USD";
+   dolar.innerHTML=dict[dropdown.value]+" USD";
   
 
    let url="https://mindicador.cl/api/dolar";
   (function($) {
       $.get(url,function(respuesta)
           {            
-             var x=Math.round(respuesta["serie"][0]["valor"]*dict[dropdownd.value]);
-             $("#valorclp").text(x+" clp");
+             var x=Math.round(respuesta["serie"][0]["valor"]*dict[dropdown.value]);
+             $("#valorclp").text(x+" CLP");
           }, "json")
   })(jQuery);
 } 

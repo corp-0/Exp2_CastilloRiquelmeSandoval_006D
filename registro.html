@@ -90,7 +90,7 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">vpn_key</i>
-                        <input id="passwordConfirm" type="password" maxlength="12"
+                        <input id="passwordConfirm" class="validate" type="password" maxlength="12"
                                required="" aria-required="true"
                                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
                         <label id="lblPasswordConfirm" for="passwordConfirm">Password (Confirmación)</label>
@@ -128,7 +128,7 @@
                     <div class="input-field col s12">
                         <i class="material-icons prefix">flag</i>
                         <script src="js/valores.js"></script>
-                        <select id="suscripcion" onchange="dropdownc(this)">
+                        <select id="suscripcion" onchange="DropdownCambio(this)">
                             <option value="free">Free</option>
                             <option value="silver">Silver</option>
                             <option value="gold">Gold</option>                           
@@ -181,8 +181,7 @@
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>
 <script async type="text/javascript" src="js/darkmode.js"></script>
-<script src="js/ValidacionUtils.js"></script>;
-<script>DesactivarSiFormularioInvalido("submit")</script>
+<script src="js/ValidacionUtils.js"></script>
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 
 
