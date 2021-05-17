@@ -1,6 +1,10 @@
-(function ClassValidator($) {
-    var password = $("#password")
-    var passwordConfirm = $("#passwordConfirm");
+const validables = document.getElementsByClassName("validate");
+const submitBtn = document.getElementById("submit");
+submitBtn.disabled = true;
+
+(function ValidacionInit($) {
+    const password = $("#password");
+    const passwordConfirm = $("#passwordConfirm");
 
     password.on("input", function () {
         if (password.val() !== passwordConfirm.val()) {
@@ -17,30 +21,18 @@
             $(this).removeClass("invalid").addClass("valid");
         }
     });
+
+    for (let i = 0; i < validables.length; i++) {
+        console.log(validables[i]);
+        validables[i].addEventListener("input",  EnablearBotonSiEsValido);
+        validables[i].addEventListener("focusout", EnablearBotonSiEsValido);
+    }
+
 })(jQuery);
 
-function ComprobarFormularioValido() {
-    const validables = document.getElementsByClassName("validate");
-
-    for (var i = 0; i < validables.length; i++) {
-        if (validables[i].classList.contains("invalid")) {
-            return false;
-        }
-    }
-
-    return true;
-}
-
-function DesactivarSiFormularioInvalido(desactivadoId) {
-    const desactivado = document.getElementById(desactivadoId);
-    desactivado.disabled = true;
-
-    const validables = document.getElementsByClassName("validate");
-
-    for (var i= 0; i < validables.length; i++) {
-        validables[i].addEventListener("input", function (){
-            desactivado.disabled = document.getElementsByClassName("invalid").length > 0;
-        })
-    }
+function EnablearBotonSiEsValido() {
+    let validos = document.getElementsByClassName("valid");
+    console.log(validos.length);
+    submitBtn.disabled = validos.length !== validables.length;
 
 }

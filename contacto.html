@@ -25,7 +25,7 @@
             <li><a class="white-text" href="quienessomos.html">Nosotros</a></li>
             <li><a class="pink-text" href="registro.html">Regístrate</a></li>
             <li>
-                <a  onclick="DualFlipClassSwitch('html', 'dark', 'snow-white', 'ColorMode');">
+                <a onclick="DualFlipClassSwitch('html', 'dark', 'snow-white', 'ColorMode');">
                     <i class="material-icons iconColor">brightness_4</i>
                 </a>
             </li>
@@ -48,67 +48,65 @@
 </nav>
 <!-- fin del navbar -->
 
-    <div class="container-fluid col s12 m12 l12 xl12">
-        <div class="divider"></div>
+<div class="container-fluid col s12 m12 l12 xl12">
+    <div class="divider"></div>
+    <div class="container section">
+        <h3 class="center-align">Contáctanos</h3>
+        <p class="flow-text center-align">
+            Porque en PinWin sabemos que tus dudas o sugerencias son importantes, comunícate con nosotros
+        </p>
         <div class="container section">
-            <h3 class="center-align">Contáctanos</h3>
-            <p class="flow-text center-align">
-                Porque en PinWin sabemos que tus dudas o sugerencias son importantes, comunícate con nosotros
-            </p>
-            <div class="container section">
-                <div class="row">
-                    <form class="col s12">
-                        <div class="row card-panel">
+            <div class="row">
+                <div class="row card-panel">
+                    <div class="row">
+                        <form class="col s12">
                             <div class="row">
-                                <form class="col s12">
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <i class="material-icons prefix">mail</i>
-                                            <input id="email" placeholder="Ingresa tu Email" type="email"
-                                                class="validate" required>
-                                            <label for="email">Email</label>
-                                            <span class="helper-text" data-error="Email Inválido"></span>
-                                        </div>
-                                        <div class="input-field col s6">
-                                            <i class="material-icons prefix">account_box</i>
-                                            <input placeholder="Ingrese nombre" id="nombre" type="text"
-                                                class="validate" maxlength="32"
-                                                required="" aria-required="true"
-                                                pattern="[A-Za-z]{3,32}">
-                                            <label for="nombre">Nombre</label>
-                                            <span class="helper-text" data-error="Nombre Inválido"></span>
-                                        </div>
-                                        <div class="input-field col s6">
-                                            <i class="material-icons prefix">account_box</i>
-                                            <input placeholder="Ingrese Apellido" id="apellido" type="text"
-                                                class="validate" maxlength="32"
-                                                required="" aria-required="true"
-                                                pattern="[A-Za-z]{3,32}">
-                                            <label for="apellido">Apellido</label>
-                                            <span class="helper-text" data-error="Apellido Inválido"></span>
-                                        </div>
-                                        <div class="input-field col s12">
-                                            <select id="categoria" required="" aria-required="true">
-                                              <option value="1">Reclamos</option>
-                                              <option value="2">Dudas</option>
-                                              <option value="3">Sugerencias</option>
-                                            </select>
-                                            <label for="categoria">Categoría</label>
-                                        </div>                              
-                                        <div class="input-field col s12">
-                                            <i class="material-icons prefix">create</i>
-                                            <textarea id="textarea1" class="materialize-textarea" length="300"
-                                                maxlength="300" class="validate" required></textarea>
-                                            <label for="textarea1">Ingrese su mensaje </label>
-                                        </div>
-                                        <br>
-                                        <div class="center-align">
-                                            <button class="btn red lighten-2" type="Submit" id="submit">Enviar</button>
-                                        </div>
-                                    </div>
-                                </form>
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">mail</i>
+                                    <input id="email" placeholder="Ingresa tu Email" type="email"
+                                           class="validate" required>
+                                    <label for="email">Email</label>
+                                    <span class="helper-text" data-error="Email Inválido"></span>
+                                </div>
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">account_box</i>
+                                    <input placeholder="Ingrese nombre" id="nombre" type="text"
+                                           class="validate" maxlength="32"
+                                           required="" aria-required="true"
+                                           pattern="[A-Za-z]{3,32}">
+                                    <label for="nombre">Nombre</label>
+                                    <span class="helper-text" data-error="Nombre Inválido"></span>
+                                </div>
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">account_box</i>
+                                    <input placeholder="Ingrese Apellido" id="apellido" type="text"
+                                           class="validate" maxlength="32"
+                                           required="" aria-required="true"
+                                           pattern="[A-Za-z]{3,32}">
+                                    <label for="apellido">Apellido</label>
+                                    <span class="helper-text" data-error="Apellido Inválido"></span>
+                                </div>
+                                <div class="input-field col s12">
+                                    <select id="categoria" required="" aria-required="true">
+                                        <option value="1">Reclamos</option>
+                                        <option value="2">Dudas</option>
+                                        <option value="3">Sugerencias</option>
+                                    </select>
+                                    <label for="categoria">Categoría</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">create</i>
+                                    <textarea id="textarea1" class="materialize-textarea validate"
+                                              maxlength="300" required></textarea>
+                                    <label for="textarea1">Ingrese su mensaje </label>
+                                </div>
+                                <br>
+                                <div class="center-align">
+                                    <button class="btn red lighten-2" type="Submit" id="submit">Enviar</button>
+                                </div>
                             </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -120,36 +118,35 @@
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script async type="text/javascript" src="js/darkmode.js"></script>
     <script src="js/ValidacionUtils.js"></script>
-    <script>DesactivarSiFormularioInvalido("submit")</script>
     <script>
-            $('input#input_text, textarea#textarea1').characterCounter();
+        $('input#input_text, textarea#textarea1').characterCounter();
     </script>
 
-<footer class="page-footer red lighten-2">
-    <div class="container">
-        <div class="row">
-            <div class="col l12 s12">
-                <h5 class="white-text">Redes sociales</h5>
-                <div class="row">
-                    <p>Síguenos en nuestras redes sociales para más información</p>
+    <footer class="page-footer red lighten-2">
+        <div class="container">
+            <div class="row">
+                <div class="col l12 s12">
+                    <h5 class="white-text">Redes sociales</h5>
+                    <div class="row">
+                        <p>Síguenos en nuestras redes sociales para más información</p>
 
-                    <a href="https://www.facebook.com/" class="fa fa-facebook "></a>
-                    <a href="https://www.instagram.com/" class="fa fa-twitter  "></a>
-                    <a href="https://twitter.com/" class="fa fa-instagram  "></a>
-                </div>
-                <div class="row">
-                    <a class="white-text" href="contacto.html">Contáctanos</a>
-                </div>
+                        <a href="https://www.facebook.com/" class="fa fa-facebook "></a>
+                        <a href="https://www.instagram.com/" class="fa fa-twitter  "></a>
+                        <a href="https://twitter.com/" class="fa fa-instagram  "></a>
+                    </div>
+                    <div class="row">
+                        <a class="white-text" href="contacto.html">Contáctanos</a>
+                    </div>
 
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            &copy; <a class="white-text text-lighten-3">Andrés Riquelme, Roberto
-            Castillo y Sebastián Sandoval.Todos los derechos reservados</a>
+        <div class="footer-copyright">
+            <div class="container">
+                &copy; <a class="white-text text-lighten-3">Andrés Riquelme, Roberto
+                Castillo y Sebastián Sandoval.Todos los derechos reservados</a>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 </body>
 </html>
